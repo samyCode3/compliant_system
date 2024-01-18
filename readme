@@ -1,0 +1,62 @@
+
+Node.js Project with MySQL Sequelize
+Welcome to this Node.js project using MySQL Sequelize! This README file will guide you through the steps to set up and run your project locally.
+
+Prerequisites
+Make sure you have the following installed on your machine:
+
+Node.js
+npm
+MySQL installed and running
+
+Getting Started
+Clone the repository:
+
+git clone https://github.com/talibackend/tidmuv-backend.git
+
+Change into the project directory:
+cd your-project
+
+Install project dependencies:
+
+npm install
+
+Create a MySQL database for your project.
+
+Update the database configuration:
+
+Open the .env file and update the development section with your MySQL database credentials.
+
+APP_KEY=
+NODE_ENV=
+PORT=
+DB_HOST=
+DB_USER=
+DB_PASS=
+DB_DATABASE=
+DB_PORT=3306
+
+Development
+To start the development server and run your project:
+
+npm run dev
+
+This command will start the server using ts-node, which will automatically restart the server when changes are detected.
+
+Visit http://localhost:${YOUR SET PORT} in your browser to see your Node.js application in action.
+
+Project Structure
+app/: Contains your application logic.
+config/: Configuration files, including database configuration.
+models/: Sequelize model definitions.
+controllers/:Control what comes from the services.
+routes/: API routes.
+services/: Business logics of the project.
+utils/: Reuseable functions.
+middleware/: Authorization and Authentication.
+
+
+Additional Notes
+Make sure to keep sensitive information, such as database credentials, secure. Consider using environment variables for configuration.
+Update the .gitignore file to exclude sensitive files or directories.
+Ensure your MySQL server is running before starting the application.
