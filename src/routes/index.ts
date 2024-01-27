@@ -4,7 +4,7 @@ import { authRoute } from "./auth.routes";
 
 
 const indexRoutes = Router()
-indexRoutes.use("/auth",authRoute)
+indexRoutes.use("/auth",authRoute) 
 indexRoutes.use(ErrorHanddlerMiddleWare)
 
 export default indexRoutes
