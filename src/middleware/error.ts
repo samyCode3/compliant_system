@@ -11,8 +11,6 @@ export const ErrorHanddlerMiddleWare =  (error: any, req: Request | any, res: Re
     const browser = agent.toAgent();
     const os = agent.os.toString();
     const device = agent.device.toString();
-    
-     try {
 
         if(error.ok === false)  {
             ClientInfoLog(error.message)
@@ -30,12 +28,12 @@ export const ErrorHanddlerMiddleWare =  (error: any, req: Request | any, res: Re
             return res.status(err.status).json(err)
             
           } 
-
+      
+          if(error) {
+            log('error', `Ip: ${req.headers['x-forwarded-for'] || req.connection.remoteAddress}, Method: ${req.method}, Url: ${req.url},  Message: ${error.message},Browser: ${browser}, Operating System: ${os}, Device: ${device}` )
+            return res.status(500).json({ok: false, status : StatusCodes.INTERNAL_SERVER_ERROR, error : error.message});
+          }
  
-    } catch(error: any) {
-        log('error', `Ip: ${req.headers['x-forwarded-for'] || req.connection.remoteAddress}, Method: ${req.method}, Url: ${req.url},  Message: ${error.message},Browser: ${browser}, Operating System: ${os}, Device: ${device}` )
-        return res.status(500).json({ok: false, status : StatusCodes.INTERNAL_SERVER_ERROR, error : error.message});
-    }
 }
 
 

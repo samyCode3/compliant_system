@@ -6,13 +6,13 @@ import { Decrypt } from '../utils/security';
 
 
 type Db = any
-export default class resourceService {
-     async create(payload: any, model: Db){
+
+     export const create = async (payload: any, model: Db) => {
           const resource = await model.create({...payload})
           return resource
           
      }
-      async findOne(payload : any, model: Db, type?:any){
+     export const  findOne = async (payload : any, model: Db, type?:any) => {
           let resources
           let message
           let where = {
@@ -28,21 +28,10 @@ export default class resourceService {
           return resources
      }
 
-    async LoginUserCredetails (payload : any, model: Db, type?:any) {
-        let user
-        user = await model.findOne({where: payload})
-        let message = `Invaild login or password`
-        if(!user) {
-            throw BadRequestError(message);
-        }
-        
-      return user
-     }
-
-      async comparePasswords(password: string, hashedPassword: string): Promise<boolean>{
+   
+     export const comparePasswords = async (password: string, hashedPassword: string): Promise<boolean> => {
         let compare = Decrypt(password, hashedPassword);
          return compare
       }
    
      
-}

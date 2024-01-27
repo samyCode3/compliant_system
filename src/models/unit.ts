@@ -1,6 +1,7 @@
 import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../config/database.config";
 import { Complaint } from "./complaint";
+import { User } from "./user";
 
 export interface UnitI {
     id?: number,
@@ -29,4 +30,4 @@ Unit.init({
      
 }, {sequelize, modelName: "unit"})
 
-Unit.hasMany(Complaint)
+Unit.belongsTo(User, {foreignKey: "user_id"})

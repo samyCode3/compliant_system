@@ -11,6 +11,10 @@ export interface UserI {
     role : "exam office"| "registration office"| "project coordinator"| "student"
 }
 
+export interface LoginI {
+    identifier: string,
+    password: string
+}
 
 export class User extends Model<UserI> implements UserI {
     id?: number;
@@ -36,12 +40,12 @@ User.init({
     admissionNumber: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true
+        unique: "admission_unique"
     },
     email : {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true
+        unique:"email_unique"
     },
     role : {
          type: DataTypes.ENUM("exam office", "registration office", "project coordinator", "student"),
