@@ -1,10 +1,10 @@
-import * as express from 'express'
+import express, { Application } from 'express'
 import * as dotenv from 'dotenv'
-import * as cors from 'cors'
+import  cors from 'cors'
 // import { IndexRoutes } from './routes'
 import { sequelize } from './config/database.config'
 import { StatusCodes } from 'http-status-codes'
-import * as useragent from 'useragent'
+import  useragent from 'useragent'
 import rateLimit from 'express-rate-limit'
 import * as apicache from 'apicache'
 import './models/index.init'
@@ -16,7 +16,7 @@ dotenv.config()
 const PORT = process.env.PORT
 
 
-const app =  express()
+const app: Application = express()
 const limiter = rateLimit({
     windowMs: 10 * 60 * 1000,
     max: 50

@@ -1,5 +1,5 @@
-import * as winston from 'winston';
-import * as path from 'path';
+import winston from 'winston';
+import path from 'path';
 
 export const logger = winston.createLogger({
     transports : []
