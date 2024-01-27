@@ -1,4 +1,5 @@
 import {Sequelize} from 'sequelize'
+import * as mysql2 from 'mysql2'
 import * as EnvConfig from 'dotenv'
 EnvConfig.config()
 
@@ -11,6 +12,7 @@ const PORT = process.env.DB_PORT
 
 export const sequelize = new Sequelize({
    dialect: 'mysql',
+   dialectModule: mysql2,
    host: HOST,
    username : USER,
    password : PASSWORD,
