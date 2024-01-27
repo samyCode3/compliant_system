@@ -68,14 +68,14 @@ app.all('*', (req, res) => {
 sequelize.sync({alter: true}) 
 .then( async () => {
     console.log(`Database connection is established`)
-    await client.connect()
-    .then((done) => {
-        console.log("Redis is connected")
-        setTimeout(() => {
-            console.log(`Queue is establish`)
-        }, 4000)
-    })
-   .catch(err => log(`error`, err))
+    // await client.connect()
+    // .then((done) => {
+    //     console.log("Redis is connected")
+    //     setTimeout(() => {
+    //         console.log(`Queue is establish`)
+    //     }, 4000)
+    // })
+//    .catch(err => log(`error`, err))
     app.listen(PORT, () => {
         console.log(`App running on port http://localhost:${PORT}`)
     })  
