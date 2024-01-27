@@ -1,0 +1,13 @@
+{"level":"info","message":"Ip: ::1,Method: GET, Info:  http://localhost/, Browser: Chrome 120.0.0, Operating System: Windows 10.0.0, Device: Other 0.0.0","timestamp":"2024-01-27T15:16:27.440Z"}
+{"level":"error","message":"Ip: ::1, Method: GET, Url: /favicon.ico, Info:  http://localhost/favicon.ico, Routes Not Found ---> Browser: Chrome 120.0.0, Operating System: Windows 10.0.0, Device: Other 0.0.0  ","timestamp":"2024-01-27T15:16:27.640Z"}
+{"level":"error","message":"Ip: ::1, Method: POST, Url: /api/v1/auth, Info:  http://localhost/api/v1/auth, Routes Not Found ---> Browser: Other 0.0.0, Operating System: Other 0.0.0, Device: Other 0.0.0  ","timestamp":"2024-01-27T15:17:37.149Z"}
+{"level":"error","message":"message: \"email\" is required","timestamp":"2024-01-27T15:17:48.444Z"}
+{"level":"error","message":"message: \"fullname\" is required","timestamp":"2024-01-27T15:34:43.591Z"}
+{"level":"error","message":"message: \"admissionNumber\" is required","timestamp":"2024-01-27T15:35:04.941Z"}
+{"level":"error","message":"Ip: ::1, Method: POST, Url: /auth/create,  Message: Cannot read properties of undefined (reading 'service'),Browser: Other 0.0.0, Operating System: Other 0.0.0, Device: Other 0.0.0","timestamp":"2024-01-27T15:35:35.059Z"}
+{"level":"error","message":"message: \"password\" is required","timestamp":"2024-01-27T15:36:22.843Z"}
+{"level":"error","message":"Ip: ::1, Method: POST, Url: /auth/create,  Message: Cannot read properties of undefined (reading 'service'),Browser: Other 0.0.0, Operating System: Other 0.0.0, Device: Other 0.0.0","timestamp":"2024-01-27T15:36:43.698Z"}
+{"level":"error","message":"Ip: ::1, Method: POST, Url: /auth/create,  Message: Cannot read properties of undefined (reading 'service'),Browser: Other 0.0.0, Operating System: Other 0.0.0, Device: Other 0.0.0","timestamp":"2024-01-27T15:40:48.363Z"}
+{"level":"error","message":"message: \"identifier\" is required","timestamp":"2024-01-27T16:01:59.532Z"}
+{"level":"error","message":"message: \"password\" length must be at least 8 characters long","timestamp":"2024-01-27T16:02:28.831Z"}
+{"level":"error","message":"message: Invalid email, addmissionNumber, or password","timestamp":"2024-01-27T16:02:52.047Z"}
